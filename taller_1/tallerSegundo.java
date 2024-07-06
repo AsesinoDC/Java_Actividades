@@ -216,15 +216,15 @@ public class tallerSegundo {
         int diaNacimiento = scanner.nextInt();
 
         int edad = Math.abs(añoNacimiento - fechaActual.getYear());
-        int mes = (mesNacimiento - fechaActual.getMonthValue());
-        int dia = (diaNacimiento - fechaActual.getDayOfMonth());
-        System.out.println("Edad: " + edad);
-        System.out.println("Meses: " + mes);
-        System.out.println("Días: " + dia);
         
-        if ((edad - 1) >= 18 &&
-            (mes - 12) >= 12 &&
-            (dia - 31) >= 31){
+        if (fechaActual.getMonthValue() < mesNacimiento ||
+            (fechaActual.getMonthValue() == mesNacimiento && 
+            fechaActual.getDayOfMonth() < diaNacimiento)) {
+            edad--;
+        }
+        System.out.println("Edad: " + edad);
+
+        if (edad >= 18){
             System.out.println("Es mayor de edad");
         } 
         else {
@@ -242,18 +242,25 @@ public class tallerSegundo {
         System.out.println("Escribe el desplazamiento");
         int desplazamiento = scanner.nextInt();
         String cifrado = "";
-
+        String abecedario = "a b c d e f g h i j k l m n ñ o p q r s t u v w x y z";
 
         for (int i = 0; i < mensaje.length(); i++) {
             char caracter = mensaje.charAt(i);
-            
-            System.out.println(caracter + desplazamiento);
-            if (caracter >= 'a' && caracter <= 'z') {
-                cifrado = mensaje + desplazamiento;
-            }
+            // System.out.println(caracter == 'a');
+            // System.out.println(abecedario.charAt(desplazamiento +1));
 
-            System.out.println(cifrado);
+            if (caracter >= 'a' && caracter <= 'z') {
+                int indice = abecedario.indexOf(caracter);
+                System.out.println("indice: " + indice);
+                // caracter = abecedario.charAt(desplazamiento + (i + 1));
+                cifrado += caracter;
+                System.out.println("caracter: " + caracter);
+                System.out.println("cifrado: " + cifrado);
+            }
         }
+        
+        System.out.println(cifrado);
+        
 
         scanner.close();
     }
