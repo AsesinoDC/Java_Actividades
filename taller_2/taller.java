@@ -48,31 +48,10 @@ public class taller {
                         if(i+1 < arrayNumeros.length){
                             result -= arrayNumeros[i + 1];
                         }
-                    }public static void opciones(){
-        System.out.println("""
-            Bienvenido a tu calculadora basica, que quieres seleccionar:
-                1. Suma
-                2. Resta
-                3. Multiplicación
-                4. División
-                5. Salir
-                """);
-
-        System.out.println("Dame la opcion que quieres");
-    }
-
-    public static double[] numeros(double[] arrayNumeros){
-        Scanner scanner = new Scanner(System.in);
-
-        for (int i = 0; i < arrayNumeros.length; i++) {
-            System.out.println("Dame el numero " + (i + 1));
-            arrayNumeros[i] = scanner.nextDouble();
-        }
-        scanner.close();
-        return arrayNumeros;
-    }
+                    }
                     System.out.println("El resultado es: " + result);
                     break;
+                    
                 case "3":
                     System.out.println("Multiplicacion:");
                     result = arrayNumeros[0];
@@ -102,6 +81,7 @@ public class taller {
                     System.out.println("Saliste de la calculadora basica");
                     break;
             }
+                    
 
             //No funciona y solo sigue su recorido sin poner nada, del resto, todo good
             System.out.println("Quieres seguir en tu calculadora basica. (si/no)");
@@ -118,7 +98,12 @@ public class taller {
             
         } while (opcion != "5");
         
-            public static void opciones(){
+
+
+
+
+
+    public static void opciones(){
         System.out.println("""
             Bienvenido a tu calculadora basica, que quieres seleccionar:
                 1. Suma
@@ -141,8 +126,11 @@ public class taller {
         scanner.close();
         return arrayNumeros;
     }
+        */
         
-    */
+        
+        
+    
 
         /**Ejercicio 2: Facturación de una tienda.
         Un cliente realiza una compra en una tienda. El programa proporciona
