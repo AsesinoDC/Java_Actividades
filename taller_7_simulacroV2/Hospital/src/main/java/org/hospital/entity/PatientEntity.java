@@ -72,6 +72,6 @@ public class PatientEntity {
                 ", last_name: " + this.last_name + " | " +
                 ", birth_date: " + this.birth_date + " | " +
                 ", identity_document: " + this.identity_document +
-                '}';
+                '}'+ "\n";
     }
 }

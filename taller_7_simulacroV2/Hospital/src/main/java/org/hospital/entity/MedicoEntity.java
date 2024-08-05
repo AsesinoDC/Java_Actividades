@@ -60,6 +60,6 @@ public class MedicoEntity {
                 ", name:  " + this.name + " | " +
                 ", last_name: " + this.last_name + " | " +
                 ", id_specialty: " + this.id_specialty +
-                '}';
+                '}' + "\n";
     }
 }

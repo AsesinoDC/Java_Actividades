@@ -50,6 +50,6 @@ public class SpecialtyEntity {
                 "id: " + this.id +  " | " +
                 ", name: " + this.name + " | " +
                 ", description: " + this.description +
-                '}';
+                '}'+ "\n";
     }
 }
