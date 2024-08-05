@@ -10,7 +10,7 @@ public class ConfigDB {
     public static Connection openConnection(){
         String URL = "jdbc:mysql://localhost:3306/HOSPITAL";
         String user = "root";
-        String password = "Bombom100";
+        String password = "";
 
         try{
             connection = DriverManager.getConnection(URL,user,password);
